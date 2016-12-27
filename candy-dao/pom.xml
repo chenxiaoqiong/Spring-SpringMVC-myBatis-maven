@@ -9,8 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <description>公共项目，此项目下放其他项目都可以能引用到的代码，例如工具类</description>
-    <artifactId>common</artifactId>
+    <description>数据库</description>
+    <artifactId>candy-dao</artifactId>
 
 
 </project>
