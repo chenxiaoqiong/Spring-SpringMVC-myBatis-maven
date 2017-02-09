@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	 xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd
+	                    http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context.xsd
+                        http://www.springframework.org/schema/mvc 
+            			http://www.springframework.org/schema/mvc/spring-mvc.xsd
+            			http://www.springframework.org/schema/aop 
+            			http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+	<!-- 启用springmvc注解 -->
+	<context:annotation-config/>
+	<!-- spring 注解 -->
+	<context:component-scan base-package="com.candy.controller" />
+	
+	<!-- 拦截器 -->
+	<!--<mvc:interceptors>-->
+		<!--<bean class="com.candy.interceptor.DefaultInterceptor">-->
+			<!--<property name="rootUrl">-->
+				<!--<value>${rootUrl}</value>-->
+			<!--</property>-->
+		<!--</bean>-->
+	<!--</mvc:interceptors>-->
+
+    <!-- 避免出现乱码 -->
+    <mvc:annotation-driven>
+        <mvc:message-converters register-defaults="true">
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <property name="supportedMediaTypes" value = "text/plain;charset=UTF-8" />
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+	<!-- 开启aop，对类代理shiro一定配置 -->
+	<aop:config proxy-target-class="true"></aop:config>
+	<!--&lt;!&ndash; AOP式方法级权限检查 &ndash;&gt;-->
+
+	 <!-- 后台处理数据为json返回前台 -->
+   
+   
+	<!-- 页面类型 -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/" />
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	
+	<!--&lt;!&ndash; 文件上传 &ndash;&gt;-->
+	<!--<bean id="multipartResolver"-->
+		<!--class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+		<!--<property name="defaultEncoding">-->
+			<!--<value>UTF-8</value>-->
+		<!--</property>-->
+		<!--<property name="maxUploadSize">-->
+			<!--<value>2097152000</value>&lt;!&ndash; 上传文件大小限制为2G &ndash;&gt;-->
+		<!--</property>-->
+		<!--<property name="maxInMemorySize">-->
+			<!--<value>20971520</value>-->
+		<!--</property>-->
+	<!--</bean>-->
+</beans>

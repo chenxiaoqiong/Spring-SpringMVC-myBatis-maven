@@ -15,12 +15,28 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping(value = "/test")
 public class TestController {
 
-    @RequestMapping(value = "/testApi")
+    @RequestMapping(value = "/ip")
     @ResponseBody
     public String testApi(HttpServletRequest request, HttpServletResponse httpServletResponse){
 
-        System.out.println(">>>>>>>>>>>>>>>>>>>>>>");
-        return "gdsdgs";
+        return getIP(request);
     }
 
+    public static String getIP(HttpServletRequest request) {
+        String sip = "";
+        sip = request.getHeader("x-forwarded-for");
+        if (sip == null || sip.length() == 0 || "unknown".equalsIgnoreCase(sip)) {
+            sip = request.getHeader("proxy-Client-IP");
+        }
+
+        if (sip == null || sip.length() == 0 || "unknown".equalsIgnoreCase(sip)) {
+            sip = request.getHeader("WL-Proxy-Client-IP");
+        }
+
+        if (sip == null || sip.length() == 0 || "unknown".equalsIgnoreCase(sip)) {
+            sip = request.getRemoteAddr();
+        }
+
+        return sip;
+    }
 }
