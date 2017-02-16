@@ -39,4 +39,8 @@ public class TestController {
 
         return sip;
     }
+
+    private void testGit(){
+        System.out.println("testGit");
+    }
 }
