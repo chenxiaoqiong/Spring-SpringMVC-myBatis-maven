@@ -42,5 +42,6 @@ public class TestController {
 
     private void testGit(){
         System.out.println("testGit");
+        System.out.println("test1");
     }
 }
