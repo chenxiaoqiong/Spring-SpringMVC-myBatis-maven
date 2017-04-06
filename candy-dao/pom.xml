@@ -9,8 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <description>数据库</description>
+    <description>mysql数据库</description>
     <artifactId>candy-dao</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>candy-dao.mysql</module>
+    </modules>
 
     <dependencies>
         <dependency>
@@ -19,6 +24,4 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
-
 </project>
