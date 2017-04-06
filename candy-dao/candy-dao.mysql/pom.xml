@@ -12,6 +12,12 @@
     <description>数据库</description>
     <artifactId>candy-dao.mysql</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>candy</groupId>
+            <artifactId>candy-model</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

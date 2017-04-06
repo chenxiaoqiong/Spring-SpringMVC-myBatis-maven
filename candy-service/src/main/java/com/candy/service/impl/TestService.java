@@ -1,6 +1,7 @@
 package com.candy.service.impl;
 
 import com.candy.mapper.UserMapper;
+import com.candy.model.User;
 import com.candy.service.ITestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,4 +19,14 @@ public class TestService implements ITestService {
     public int test() {
         return userMapper.count();
     }
+
+    public String getNameById(Long id) {
+        return userMapper.getNameById(id);
+    }
+
+    public User getUser(Long id) {
+        return userMapper.getUser(id);
+    }
+
+
 }

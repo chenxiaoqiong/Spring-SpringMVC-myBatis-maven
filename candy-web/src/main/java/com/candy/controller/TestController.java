@@ -49,7 +49,10 @@ public class TestController {
     @ResponseBody
     public String testService(HttpServletRequest request, HttpServletResponse httpServletResponse) {
 
+        System.out.println(testService.getNameById((long) 1));
+        System.out.println(testService.getUser((long) 1));
         return testService.test() + "";
+
     }
 
     private void testGit(){

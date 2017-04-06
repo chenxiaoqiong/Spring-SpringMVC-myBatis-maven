@@ -1,5 +1,7 @@
 package com.candy.mapper;
 
+import com.candy.model.User;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,5 +12,7 @@ import org.springframework.stereotype.Component;
 public interface UserMapper {
     int count();
 
-    String getNameById();
+    String getNameById(@Param(value = "id") Long id);
+
+    User getUser(@Param(value = "id") Long id);
 }

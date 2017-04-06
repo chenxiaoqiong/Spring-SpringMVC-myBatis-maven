@@ -6,4 +6,6 @@ package com.candy.service;
  */
 public interface ITestService {
     int test();
+
+    String getNameById(Long id);
 }
