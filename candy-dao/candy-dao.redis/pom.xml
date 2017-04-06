@@ -3,13 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>candy</artifactId>
+        <artifactId>candy-dao</artifactId>
         <groupId>candy</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <description>公共项目，此项目下放其他项目都可以能引用到的代码，例如工具类</description>
-    <artifactId>candy-common</artifactId>
+    <description>redis缓存数据库</description>
+    <artifactId>candy-dao.redis</artifactId>
+
 
 </project>

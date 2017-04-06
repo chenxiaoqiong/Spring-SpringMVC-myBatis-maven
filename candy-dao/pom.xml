@@ -15,6 +15,7 @@
 
     <modules>
         <module>candy-dao.mysql</module>
+        <module>candy-dao.redis</module>
     </modules>
 
     <dependencies>

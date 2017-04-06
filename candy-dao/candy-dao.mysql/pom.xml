@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <description>数据库</description>
+    <description>mysql数据库</description>
     <artifactId>candy-dao.mysql</artifactId>
 
     <dependencies>
