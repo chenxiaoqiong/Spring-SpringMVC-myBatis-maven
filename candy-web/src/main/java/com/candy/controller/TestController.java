@@ -47,9 +47,15 @@ public class TestController {
 
     @RequestMapping(value = "/service")
     @ResponseBody
-    public String testService(HttpServletRequest request, HttpServletResponse httpServletResponse){
+    public String testService(HttpServletRequest request, HttpServletResponse httpServletResponse) {
 
-        return testService.test()+"";
+        return testService.test() + "";
+    }
+
+    private void testGit(){
+        System.out.println("testGit");
+        System.out.println("test1");
+        System.out.println("test2");
     }
 
 }
