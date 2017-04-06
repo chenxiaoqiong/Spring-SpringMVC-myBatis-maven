@@ -1,5 +1,7 @@
 package com.candy.controller;
 
+import com.candy.service.impl.TestService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -40,8 +42,14 @@ public class TestController {
         return sip;
     }
 
-    private void testGit(){
-        System.out.println("testGit");
-        System.out.println("test2");
+    @Autowired
+    private TestService testService;
+
+    @RequestMapping(value = "/service")
+    @ResponseBody
+    public String testService(HttpServletRequest request, HttpServletResponse httpServletResponse){
+
+        return testService.test()+"";
     }
+
 }

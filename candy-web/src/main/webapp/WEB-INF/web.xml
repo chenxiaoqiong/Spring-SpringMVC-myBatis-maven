@@ -41,13 +41,13 @@
         <listener-class>ch.qos.logback.ext.spring.web.LogbackConfigListener</listener-class>
     </listener>
 
-    <!-- 初始化spring配置文件 -->
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>
-            classpath:applicationContext.xml
-        </param-value>
-    </context-param>
+    <!--&lt;!&ndash; 初始化spring配置文件 &ndash;&gt;-->
+    <!--<context-param>-->
+        <!--<param-name>contextConfigLocation</param-name>-->
+        <!--<param-value>-->
+            <!--classpath:applicationContext.xml-->
+        <!--</param-value>-->
+    <!--</context-param>-->
 
     <!-- springmvc核心控制器 -->
     <servlet>

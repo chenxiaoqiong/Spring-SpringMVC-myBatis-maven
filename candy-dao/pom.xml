@@ -12,5 +12,13 @@
     <description>数据库</description>
     <artifactId>candy-dao</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>candy</groupId>
+            <artifactId>candy-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 
 </project>
