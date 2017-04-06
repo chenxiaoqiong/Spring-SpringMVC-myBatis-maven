@@ -4,6 +4,7 @@ package com.candy.model;
  * <h1> title </h1>
  * Created by chenxiaoqiong on 2017/4/6 0006 下午 2:20.
  */
+
 public class User {
     private Long id;
 

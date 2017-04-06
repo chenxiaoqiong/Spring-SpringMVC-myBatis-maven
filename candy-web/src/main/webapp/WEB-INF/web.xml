@@ -55,7 +55,12 @@
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:springmvc.xml</param-value>
+            <param-value>
+                classpath*:schema/spring/spring-app-mapper.xml,
+                classpath*:schema/spring/spring-app-service.xml,
+                classpath*:schema/spring/spring-app-controller.xml,
+                classpath*:schema/spring/spring-mvc-dispatcher.xml
+            </param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
